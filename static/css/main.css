@@ -1,0 +1,86 @@
+body {
+    background-color: #E5E5E5;
+}
+/* Стили для сетки */
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Отступы между элементами */
+    justify-content: center; /* Центрирование элементов */
+}
+
+/* Стили для элемента внутри сетки */
+.photo-grid a {
+    display: block;
+    /* width: calc(25% - 10px); Каждый элемент занимает 25% ширины с учетом отступов */
+    box-sizing: border-box; /* Включаем отступы в ширину */
+    overflow: hidden;
+    border-radius: 8px; /* Скругленные углы */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.photo-grid a:hover {
+    transform: scale(1.05); /* Увеличение элемента при наведении */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Тень при наведении */
+}
+
+/* Стили для изображений */
+.photo-grid img {
+    width: 100%; /* Адаптивная ширина */
+    height: auto; /* Автоматическая высота */
+    display: block;
+    border-radius: 8px;
+    object-fit: cover; /* Сохранение пропорций изображения */
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .photo-grid a {
+        width: calc(33.333% - 10px); /* 3 элемента в строке на планшетах */
+    }
+}
+
+@media (max-width: 768px) {
+    .photo-grid a {
+        width: calc(50% - 10px); /* 2 элемента в строке на мобильных */
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-grid a {
+        width: 100%; /* 1 элемент в строке на очень маленьких экранах */
+    }
+}
+
+.photo-grid .download-btn {
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.photo-grid .download-btn:hover {
+    background-color: #218838;
+}
+
+.dz-error-mark {
+    display: none;
+}
+.dz-success-mark {
+    display: none;
+}
+
+#spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    z-index: 9999; /* Убедитесь, что спиннер будет поверх контента */
+} 

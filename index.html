@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sample</title>
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/svg+xml" href="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"  integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <link href="/static/css/main.css" rel="stylesheet">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dropzone@5.9.3/dist/min/dropzone.min.js"></script>
+    <div class="container py-5">
+        <div class="row mt-3">
+            <div class="col-12 text-center">
+                <a href="/" class="d-inline-block rounded overflow-hidden">
+                    <img src="/static/img/bnr.png" alt="Sample banner" class="img-fluid">
+                </a>
+            </div>
+        </div>
+        <div id="dropzone-row" class="row mt-5">
+            <div class="col-12">
+                <div class="card mx-auto" style="max-width: 400px;">
+                    <div class="card-body text-center">
+                        <form action="#" class="dropzone" id="selfieUpload" style="border: 2px dashed #ccc; padding: 20px;">
+                            <div id="drop-in-div" class="mb-3">
+                                <div class="dz-message border rounded bg-light text-dark py-5">
+                                    <span>UPLOAD SELFIE</span>
+                                </div>
+                            </div>
+                        </form>
+                        <button class="btn btn-success btn-block" disabled>Find my photos</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="spinner" class="spinner-border text-primary" role="status" style="display: none;">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div id="resultsContainer" class="row mt-5 photo-grid">
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</body>
+</html>
